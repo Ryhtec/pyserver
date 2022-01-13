@@ -49,12 +49,12 @@ class WebServer(BaseHTTPRequestHandler):
         #convert text file to byte
         self.wfile.write(bytes(file_to_open,'utf-8'))
 
-#httpd httpdameion program that runs on background contains the localhost and port
+    #httpd httpdameion program that runs on background contains the localhost and port
 
-httpd = HTTPServer(('localhost',8000),WebServer)
+    httpd = HTTPServer(('localhost',8000),WebServer)
 
-#the server to run unless closed by user
-httpd.serve_forever()
+    #the server to run unless closed by user
+    httpd.serve_forever()
 
 
 Testing
